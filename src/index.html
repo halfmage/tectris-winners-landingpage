@@ -81,18 +81,24 @@ layout: default
                         name="tectris-winner-landingpage-contact"
                         action="/success"
                         method="POST"
+                        netlify-honeypot="bot-field"
                         data-netlify="true"
                     >
+                        <p class="hidden">
+                            <label>
+                                Don't fill this out if you are human: <input name="bot-field" />
+                            </label>
+                        </p>
                         <label>
-                            <div class="mb-1 text-sm text-gray-200">Your Name:</div>
+                            <div class="mb-1 text-gray-200">Your Name:</div>
                             <input type="text" class="bg-gray-950 border border-gray-500 rounded-lg p-2 w-full block" name="name" />
                         </label>
                         <label>
-                            <div class="mb-1 text-sm text-gray-200">Your Email:</div>
+                            <div class="mb-1 text-gray-200">Your Email:</div>
                             <input type="email" class="bg-gray-950 border border-gray-500 rounded-lg p-2 w-full block" name="email" />
                         </label>
                         <label>
-                            <div class="mb-1 text-sm text-gray-200">Message:</div>
+                            <div class="mb-1 text-gray-200">Message:</div>
                             <textarea class="bg-gray-950 border border-gray-500 rounded-lg p-2 w-full block" name="message"></textarea>
                         </label>
                         <button class="bg-white text-black p-3 rounded-lg" type="submit">Send</button>
